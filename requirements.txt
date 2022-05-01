@@ -1,4 +1,7 @@
 attrdict==2.0.0
+werkzeug==0.11.10
+markdown==2.6.8
+pyyaml==3.12
 gevent==1.4.0
 gevent-websocket==0.10.1
 h5py==2.6.0
