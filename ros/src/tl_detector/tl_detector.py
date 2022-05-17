@@ -66,7 +66,7 @@ class TLDetector(object):
     def traffic_cb(self, msg):
         self.lights = msg.lights
 
-        if not self.waypoints_tree:
+        if not self.waypoints_tree or not self.pose:
             return
 
         light_wp, state = self.process_traffic_lights()
@@ -190,7 +190,7 @@ class TLDetector(object):
             state = self.get_light_state(closest_light)
             return line_wp_idx, state
 
-        self.waypoints = None
+        # self.waypoints = None
 
         return -1, TrafficLight.UNKNOWN
 
